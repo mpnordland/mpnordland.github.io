@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="744.09448819"
+   height="1052.3622047"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.5 r10040"
+   sodipodi:docname="mockup.svg">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.49497475"
+     inkscape:cx="28.172104"
+     inkscape:cy="550.13831"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1260"
+     inkscape:window-height="746"
+     inkscape:window-x="10"
+     inkscape:window-y="28"
+     inkscape:window-maximized="0"
+     showguides="true"
+     inkscape:guide-bbox="true" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="fill:#008000;fill-opacity:1;stroke:none"
+       id="rect2985"
+       width="1857.1428"
+       height="748.57141"
+       x="-972.46155"
+       y="22.127592" />
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-opacity:1"
+       id="rect2987"
+       width="722.85712"
+       height="654.28571"
+       x="49.859882"
+       y="81.795074"
+       ry="12.08362" />
+    <image
+       y="222.7661"
+       x="109.89537"
+       id="image4382"
+       xlink:href="file:///home/micah/dev/hickoryst/img/church_front_cropped.png"
+       height="311.2236"
+       width="601.26624" />
+    <g
+       id="g6082"
+       transform="translate(14.285714,15.714286)">
+      <path
+         d="m 147.85714,140.57646 a 38.92857,38.92857 0 1 1 -77.857136,0 38.92857,38.92857 0 1 1 77.857136,0 z"
+         sodipodi:ry="38.92857"
+         sodipodi:rx="38.92857"
+         sodipodi:cy="140.57646"
+         sodipodi:cx="108.92857"
+         id="path4385"
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:5.03800011;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         sodipodi:type="arc"
+         transform="matrix(1.0366211,0,0,1.0366211,-4.9712311,-5.2373557)" />
+      <path
+         sodipodi:nodetypes="ccccccccccccc"
+         inkscape:connector-curvature="0"
+         id="path4387"
+         d="m 121.44651,176.90044 -3.92857,-27.67858 21.78572,-4.28571 -1.42857,-5.71429 -23.21429,0.35715 -2.14286,-23.57143 -7.14285,-0.71429 -5.35715,22.85714 -21.071422,-2.85714 -1.428571,6.07143 19.999997,6.96429 -3.928569,28.57143 c 8.809515,3.80952 18.095235,3.80953 27.857135,0 z"
+         style="fill:#000000;fill-opacity:1;stroke:none" />
+      <path
+         sodipodi:nodetypes="ccccccccccccc"
+         inkscape:connector-curvature="0"
+         id="path4599"
+         d="m 98.508543,150.92182 c -2.794202,1.21229 -8.4807,3.39286 -8.4807,3.39286 L 78.44782,152.55762 73.893976,141.46644 c 0,0 5.146137,-15.10973 6.655432,-23.04462 8.0927,-4.58333 16.185397,-9.16667 24.278092,-13.75 6.42982,2.20238 12.85963,4.40476 19.28944,6.60714 1.16403,3.80952 2.32804,7.61905 3.49205,11.42857 2.93777,0.59524 5.87553,1.19048 8.81329,1.78572 1.99547,6.84524 3.99092,13.69047 5.98638,20.53571 -3.40428,2.95201 -6.64369,6.1813 -10.30988,8.75 -5.99181,-0.34233 -11.91273,-1.60025 -17.91972,-1.79711 -5.22351,-0.35334 -10.44701,-0.70669 -15.670517,-1.06003 z"
+         style="fill:none;stroke:#000000;stroke-width:3.76347899;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-size:48px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;fill:#000000;fill-opacity:1;stroke:none;font-family:Montserrat;-inkscape-font-specification:Montserrat"
+       x="191.42857"
+       y="167.23074"
+       id="text2997"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan2999"
+         x="191.42857"
+         y="167.23074"
+         style="font-size:40px">Hickory St Baptist Church</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:22px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;fill:#000000;fill-opacity:1;stroke:none;font-family:Montserrat;-inkscape-font-specification:Montserrat"
+       x="109.63137"
+       y="602.36218"
+       id="text3001"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3003"
+         x="109.63137"
+         y="602.36218">Where We Are</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text3005"
+       y="602.36218"
+       x="324.65408"
+       style="font-size:22px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;fill:#000000;fill-opacity:1;stroke:none;font-family:Montserrat;-inkscape-font-specification:Montserrat"
+       xml:space="preserve"><tspan
+         y="602.36218"
+         x="324.65408"
+         id="tspan3007"
+         sodipodi:role="line">When We Meet</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:22px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;fill:#000000;fill-opacity:1;stroke:none;font-family:Montserrat;-inkscape-font-specification:Montserrat"
+       x="573.10681"
+       y="602.36218"
+       id="text3009"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3011"
+         x="573.10681"
+         y="602.36218">Who We Are</tspan></text>
+    <path
+       id="path3305"
+       d="m 213.55445,628.67813 -48,24 18,6 6,18 24,-48 z"
+       inkscape:connector-curvature="0" />
+    <path
+       id="path3355"
+       d="m 410.5285,617.96385 c -19.09285,0 -34.71428,15.62143 -34.71428,34.71428 0,19.09287 15.62143,34.71429 34.71428,34.71429 19.09287,0 34.71429,-15.62142 34.71429,-34.71429 0,-19.09285 -15.62142,-34.71428 -34.71429,-34.71428 z m 0,8.67857 c 14.40644,0 26.03572,11.62929 26.03572,26.03571 0,14.40644 -11.62928,26.03572 -26.03572,26.03572 -14.40642,0 -26.03571,-11.62928 -26.03571,-26.03572 0,-14.40642 11.62929,-26.03571 26.03571,-26.03571 z m -4.33928,8.67858 v 19.26642 l 1.38857,1.12821 4.33929,4.33929 2.95071,3.29786 6.24858,-6.24857 -3.29787,-2.95071 -2.95071,-2.95072 v -15.70821 h -8.67857 z"
+       inkscape:connector-curvature="0" />
+    <path
+       id="path3425"
+       d="m 654.1996,620.81598 c -4.05735,0 -7.55781,2.78446 -9.70582,7.00092 3.58002,4.29602 5.72803,10.18316 5.72803,16.94541 0,2.30712 -0.23867,4.37558 -0.71601,6.44403 1.51157,0.87512 3.02313,1.51157 4.6938,1.51157 6.60314,0 11.93339,-7.16004 11.93339,-15.91118 0,-8.75116 -5.33025,-15.91119 -11.93339,-15.91119 z m -23.86677,7.9556 c -6.60314,0 -11.93339,7.16003 -11.93339,15.91118 0,8.75115 5.33025,15.91118 11.93339,15.91118 6.60314,0 11.93338,-7.16003 11.93338,-15.91118 0,-8.75115 -5.33024,-15.91118 -11.93338,-15.91118 z m 37.78906,25.13966 c -3.42091,4.05737 -8.11471,6.5236 -13.44495,6.6827 2.14801,3.02312 3.50045,6.6827 3.50045,10.66049 v 5.25069 h 15.91119 v -13.20628 c 0,-4.1369 -2.46623,-7.71692 -5.96669,-9.46715 z m -51.71134,7.9556 c -3.50047,1.75023 -5.9667,5.33025 -5.9667,9.46716 v 13.20628 h 39.77796 v -13.20629 c 0,-4.1369 -2.46624,-7.71693 -5.9667,-9.46716 -3.58001,4.21647 -8.43293,6.6827 -13.92228,6.6827 -5.48936,0 -10.34227,-2.54579 -13.92228,-6.6827 z"
+       inkscape:connector-curvature="0" />
+    <rect
+       ry="9.0870857"
+       y="244.30611"
+       x="-324.05344"
+       height="492.03384"
+       width="322.2966"
+       id="rect4204"
+       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.57904917000000000;stroke-opacity:1" />
+    <image
+       width="275.59586"
+       height="142.65218"
+       xlink:href="file:///home/micah/dev/hickoryst/img/church_front_cropped.png"
+       id="image4217"
+       x="-298.67606"
+       y="342.76608" />
+    <path
+       inkscape:connector-curvature="0"
+       d="m -241.44554,567.14804 -48.00004,24 18.00004,6 6,18 24,-48 z"
+       id="path4231" />
+    <path
+       inkscape:connector-curvature="0"
+       d="m -165.3873,556.43376 c -19.09285,0 -34.71428,15.62143 -34.71428,34.71428 0,19.09287 15.62143,34.71429 34.71428,34.71429 19.09287,0 34.71429,-15.62142 34.71429,-34.71429 0,-19.09285 -15.62142,-34.71428 -34.71429,-34.71428 z m 0,8.67857 c 14.40644,0 26.03572,11.62929 26.03572,26.03571 0,14.40644 -11.62928,26.03572 -26.03572,26.03572 -14.40642,0 -26.03571,-11.62928 -26.03571,-26.03572 0,-14.40642 11.62929,-26.03571 26.03571,-26.03571 z m -4.33928,8.67858 v 19.26642 l 1.38857,1.12821 4.33929,4.33929 2.95071,3.29786 6.24858,-6.24857 -3.29787,-2.95071 -2.95071,-2.95072 v -15.70821 h -8.67857 z"
+       id="path4233" />
+    <path
+       inkscape:connector-curvature="0"
+       d="m -53.395622,559.2859 c -4.05735,0 -7.55781,2.78446 -9.70582,7.00092 3.58002,4.29602 5.72803,10.18316 5.72803,16.94541 0,2.30712 -0.23867,4.37558 -0.71601,6.44403 1.51157,0.87512 3.02313,1.51157 4.6938,1.51157 6.60314,0 11.93339,-7.16004 11.93339,-15.91118 0,-8.75116 -5.33025,-15.91119 -11.93339,-15.91119 z m -23.86677,7.9556 c -6.60314,0 -11.93339,7.16003 -11.93339,15.91118 0,8.75115 5.33025,15.91117 11.93339,15.91117 6.60314,0 11.93338,-7.16003 11.93338,-15.91117 0,-8.75116 -5.33024,-15.91118 -11.93338,-15.91118 z m 37.78906,25.13966 c -3.42091,4.05737 -8.11471,6.5236 -13.44495,6.6827 2.14801,3.02312 3.50045,6.6827 3.50045,10.66049 v 5.25069 h 15.91119 v -13.20628 c 0,-4.1369 -2.46623,-7.71692 -5.96669,-9.46715 z m -51.71134,7.9556 c -3.50047,1.75023 -5.9667,5.33025 -5.9667,9.46716 v 13.20628 h 39.77796 v -13.20629 c 0,-4.1369 -2.46624,-7.71693 -5.9667,-9.46716 -3.58001,4.21647 -8.43293,6.6827 -13.92228,6.6827 -5.48936,0 -10.34227,-2.5458 -13.92228,-6.6827 z"
+       id="path4235" />
+    <text
+       xml:space="preserve"
+       style="font-size:22px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;fill:#000000;fill-opacity:1;stroke:none;font-family:Montserrat;-inkscape-font-specification:Montserrat"
+       x="-237.38585"
+       y="301.80746"
+       id="text4245"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4247"
+         x="-237.38585"
+         y="301.80746">Hickory St Baptist</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:22px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;fill:#000000;fill-opacity:1;stroke:none;font-family:Montserrat;-inkscape-font-specification:Montserrat"
+       x="-301.7124"
+       y="537.18439"
+       id="text4284"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4286"
+         x="-301.7124"
+         y="537.18439">Where</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:22px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;fill:#000000;fill-opacity:1;stroke:none;font-family:Montserrat;-inkscape-font-specification:Montserrat"
+       x="-195.96959"
+       y="537.18439"
+       id="text4288"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4290"
+         x="-195.96959"
+         y="537.18439" /></text>
+    <text
+       xml:space="preserve"
+       style="font-size:22px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;fill:#000000;fill-opacity:1;stroke:none;font-family:Montserrat;-inkscape-font-specification:Montserrat"
+       x="-197.23779"
+       y="535.16406"
+       id="text4292"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4294"
+         x="-197.23779"
+         y="535.16406">When</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:22px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;fill:#000000;fill-opacity:1;stroke:none;font-family:Montserrat;-inkscape-font-specification:Montserrat"
+       x="-90.775444"
+       y="535.16406"
+       id="text4296"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4298"
+         x="-90.775444"
+         y="535.16406">Who</tspan></text>
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:none"
+       id="rect4300"
+       width="186.93616"
+       height="285.38593"
+       x="-574.57129"
+       y="450.95401"
+       ry="5.2706261" />
+    <image
+       y="533.07996"
+       x="-561.31567"
+       id="image4302"
+       xlink:href="file:///home/micah/dev/hickoryst/img/church_front_cropped.png"
+       height="85.678421"
+       width="165.52582" />
+    <text
+       xml:space="preserve"
+       style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;fill:#000000;fill-opacity:1;stroke:none;font-family:Montserrat;-inkscape-font-specification:Montserrat"
+       x="-524.5545"
+       y="500.58429"
+       id="text4312"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4314"
+         x="-524.5545"
+         y="500.58429"
+         style="font-size:14px">Hickory St Baptist</tspan></text>
+    <path
+       id="path4324"
+       d="m -527.45777,646.26131 -33.8579,16.92894 12.69673,4.23223 4.23224,12.69671 16.92893,-33.85788 z"
+       inkscape:connector-curvature="0" />
+    <path
+       id="path4330"
+       d="m -478.55277,639.58764 c -12.98143,0 -23.6026,10.62117 -23.6026,23.6026 0,12.98145 10.62117,23.60262 23.6026,23.60262 12.98145,0 23.60261,-10.62117 23.60261,-23.60262 0,-12.98143 -10.62116,-23.6026 -23.60261,-23.6026 z m 0,5.90065 c 9.79509,0 17.70196,7.90688 17.70196,17.70195 0,9.79509 -7.90687,17.70196 -17.70196,17.70196 -9.79507,0 -17.70195,-7.90687 -17.70195,-17.70196 0,-9.79507 7.90688,-17.70195 17.70195,-17.70195 z m -2.95032,5.90066 v 13.09945 l 0.9441,0.76708 2.95033,2.95033 2.00622,2.24225 4.24848,-4.24847 -2.24226,-2.00622 -2.00622,-2.00623 v -10.68017 h -5.90065 z"
+       inkscape:connector-curvature="0" />
+    <path
+       id="path4332"
+       d="m -408.31277,643.12855 c -2.55467,0 -4.7587,1.7532 -6.11118,4.40806 2.25413,2.70494 3.6066,6.41173 3.6066,10.66952 0,1.45266 -0.15027,2.75504 -0.45082,4.05742 0.95174,0.55101 1.90348,0.95175 2.9554,0.95175 4.15761,0 7.51375,-4.50825 7.51375,-10.01833 0,-5.51008 -3.35614,-10.01833 -7.51375,-10.01833 z m -15.02748,5.00917 c -4.15761,0 -7.51375,4.50824 -7.51375,10.01832 0,5.51008 3.35614,10.01831 7.51375,10.01831 4.1576,0 7.51374,-4.50824 7.51374,-10.01831 0,-5.51009 -3.35614,-10.01832 -7.51374,-10.01832 z m 23.79352,15.82895 c -2.15394,2.55468 -5.10935,4.10752 -8.46549,4.2077 1.35248,1.90347 2.20403,4.20769 2.20403,6.71227 v 3.30604 h 10.01833 v -8.31521 c 0,-2.60475 -1.55284,-4.85888 -3.75687,-5.96089 z m -32.55956,5.00917 c -2.20403,1.10201 -3.75687,3.35614 -3.75687,5.9609 v 8.31521 h 25.04581 v -8.31521 c 0,-2.60476 -1.55284,-4.8589 -3.75687,-5.96091 -2.25412,2.65486 -5.30972,4.2077 -8.76603,4.2077 -3.45633,0 -6.51192,-1.60294 -8.76604,-4.2077 z"
+       inkscape:connector-curvature="0" />
+    <g
+       transform="matrix(0.5511341,0,0,0.5511341,-339.40366,218.36319)"
+       id="g4334">
+      <path
+         transform="matrix(1.0366211,0,0,1.0366211,-4.9712311,-5.2373557)"
+         sodipodi:type="arc"
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:5.03800011;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         id="path4336"
+         sodipodi:cx="108.92857"
+         sodipodi:cy="140.57646"
+         sodipodi:rx="38.92857"
+         sodipodi:ry="38.92857"
+         d="m 147.85714,140.57646 c 0,21.49966 -17.42891,38.92857 -38.92857,38.92857 -21.499652,0 -38.928566,-17.42891 -38.928566,-38.92857 0,-21.49965 17.428914,-38.92857 38.928566,-38.92857 21.49966,0 38.92857,17.42892 38.92857,38.92857 z" />
+      <path
+         style="fill:#000000;fill-opacity:1;stroke:none"
+         d="m 121.44651,176.90044 -3.92857,-27.67858 21.78572,-4.28571 -1.42857,-5.71429 -23.21429,0.35715 -2.14286,-23.57143 -7.14285,-0.71429 -5.35715,22.85714 -21.071422,-2.85714 -1.428571,6.07143 19.999997,6.96429 -3.928569,28.57143 c 8.809515,3.80952 18.095235,3.80953 27.857135,0 z"
+         id="path4338"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="ccccccccccccc" />
+      <path
+         style="fill:none;stroke:#000000;stroke-width:3.76347899;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         d="m 98.508543,150.92182 c -2.794202,1.21229 -8.4807,3.39286 -8.4807,3.39286 L 78.44782,152.55762 73.893976,141.46644 c 0,0 5.146137,-15.10973 6.655432,-23.04462 8.0927,-4.58333 16.185397,-9.16667 24.278092,-13.75 6.42982,2.20238 12.85963,4.40476 19.28944,6.60714 1.16403,3.80952 2.32804,7.61905 3.49205,11.42857 2.93777,0.59524 5.87553,1.19048 8.81329,1.78572 1.99547,6.84524 3.99092,13.69047 5.98638,20.53571 -3.40428,2.95201 -6.64369,6.1813 -10.30988,8.75 -5.99181,-0.34233 -11.91273,-1.60025 -17.91972,-1.79711 -5.22351,-0.35334 -10.44701,-0.70669 -15.670517,-1.06003 z"
+         id="path4340"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="ccccccccccccc" />
+    </g>
+    <g
+       id="g4342"
+       transform="matrix(0.38488747,0,0,0.38488747,-590.74364,442.68354)">
+      <path
+         d="m 147.85714,140.57646 c 0,21.49966 -17.42891,38.92857 -38.92857,38.92857 -21.499652,0 -38.928566,-17.42891 -38.928566,-38.92857 0,-21.49965 17.428914,-38.92857 38.928566,-38.92857 21.49966,0 38.92857,17.42892 38.92857,38.92857 z"
+         sodipodi:ry="38.92857"
+         sodipodi:rx="38.92857"
+         sodipodi:cy="140.57646"
+         sodipodi:cx="108.92857"
+         id="path4344"
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:5.03800011;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         sodipodi:type="arc"
+         transform="matrix(1.0366211,0,0,1.0366211,-4.9712311,-5.2373557)" />
+      <path
+         sodipodi:nodetypes="ccccccccccccc"
+         inkscape:connector-curvature="0"
+         id="path4346"
+         d="m 121.44651,176.90044 -3.92857,-27.67858 21.78572,-4.28571 -1.42857,-5.71429 -23.21429,0.35715 -2.14286,-23.57143 -7.14285,-0.71429 -5.35715,22.85714 -21.071422,-2.85714 -1.428571,6.07143 19.999997,6.96429 -3.928569,28.57143 c 8.809515,3.80952 18.095235,3.80953 27.857135,0 z"
+         style="fill:#000000;fill-opacity:1;stroke:none" />
+      <path
+         sodipodi:nodetypes="ccccccccccccc"
+         inkscape:connector-curvature="0"
+         id="path4348"
+         d="m 98.508543,150.92182 c -2.794202,1.21229 -8.4807,3.39286 -8.4807,3.39286 L 78.44782,152.55762 73.893976,141.46644 c 0,0 5.146137,-15.10973 6.655432,-23.04462 8.0927,-4.58333 16.185397,-9.16667 24.278092,-13.75 6.42982,2.20238 12.85963,4.40476 19.28944,6.60714 1.16403,3.80952 2.32804,7.61905 3.49205,11.42857 2.93777,0.59524 5.87553,1.19048 8.81329,1.78572 1.99547,6.84524 3.99092,13.69047 5.98638,20.53571 -3.40428,2.95201 -6.64369,6.1813 -10.30988,8.75 -5.99181,-0.34233 -11.91273,-1.60025 -17.91972,-1.79711 -5.22351,-0.35334 -10.44701,-0.70669 -15.670517,-1.06003 z"
+         style="fill:none;stroke:#000000;stroke-width:3.76347899;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+    </g>
+  </g>
+</svg>

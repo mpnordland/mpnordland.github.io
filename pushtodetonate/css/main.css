@@ -1,0 +1,353 @@
+/* ==========================================================================
+   HTML5 Boilerplate styles - h5bp.com (generated via initializr.com)
+   ========================================================================== */
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+body {
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+img {
+    vertical-align: middle;
+}
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.chromeframe {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+body {
+    background: #3498db;
+}
+
+#sky {
+    width:100%;
+    height: 40%;
+    position: fixed;
+    bottom: 20%;
+}
+
+.land {
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    height: 20%;
+    background: #27ae60;
+}
+
+.cloud{
+    width: 350px;
+    height: 120px;
+    border-radius: 100px;    
+    position: relative;
+    background: #ecf0f1
+}
+
+.cloud:after, .cloud:before{
+    content:'';
+    position: absolute;
+    background: #ecf0f1;
+}
+
+.cloud:before {
+    width: 180px; 
+    height: 180px;
+    top: -90px; 
+    right: 50px;    
+    border-radius: 200px;
+}
+
+.cloud:after {
+    width: 100px;
+    height: 100px;
+    top: -50px;
+    left: 50px;
+    border-radius: 100px;
+}
+
+.right {
+    float: right;
+    margin-top: -100px;
+    margin-right: 20px;
+}
+
+
+.left {
+    float: left;
+    margin-left: 100px;
+}
+
+/**
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    contenteditable attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that are clearfixed.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+    *zoom: 1;
+}
+
+#box {
+    background: #a02100;
+    width: 100px;
+    height: 100px;
+    margin:0 auto;
+    border-radius: 10px;
+}
+#plunger{
+    padding-top: 10px;
+    margin-top: -100px;
+}
+
+#stick {
+    width: 15px;
+    height: 70px;
+    margin: 0 auto;
+    margin-bottom: -10px;
+    background: #d35400;
+    z-index: -1;
+
+}
+
+#handle {
+    width: 100px;
+    height: 20px;
+    margin: 0 auto;
+    margin-bottom: -10px;
+    border-radius: 30px;
+    background: #d35400;
+}
+
+
+#explosion{
+    z-index: -1;
+    position: fixed;
+    top: 0px;
+    width: 0px;
+    height: 0px;
+    margin: 40% 50% 50% 50%;
+
+    background: #f7ff89; /* Old browsers */
+    background: -moz-radial-gradient(center, ellipse cover, #f7ff89 21%, #e67e22 63%, #e74c3c 100%); /* FF3.6+ */
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(21%,#f7ff89), color-stop(63%,#e67e22), color-stop(100%,#e74c3c)); /* Chrome,Safari4+ */
+    background: -webkit-radial-gradient(center, ellipse cover, #f7ff89 21%,#e67e22 63%,#e74c3c 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-radial-gradient(center, ellipse cover, #f7ff89 21%,#e67e22 63%,#e74c3c 100%); /* Opera 12+ */
+    background: -ms-radial-gradient(center, ellipse cover, #f7ff89 21%,#e67e22 63%,#e74c3c 100%); /* IE10+ */
+    background: radial-gradient(ellipse at center, #f7ff89 21%,#e67e22 63%,#e74c3c 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7ff89', endColorstr='#e74c3c',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+    transition: width 0.1s, height 0.1s, margin 0.1s;
+}
+#explosion.show-explosion{
+    height: 200%;
+    width: 100%;
+    margin: 0%;
+}
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+
+}
+
+@media print,
+       (-o-min-device-pixel-ratio: 5/4),
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
+
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    *text-indent: -9999px;
+}
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 150%;
+}
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   Print styles
+   ========================================================================== */
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster: h5bp.com/s */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links for images, or javascript/internal links
+     */
+
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group; /* h5bp.com/t */
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}

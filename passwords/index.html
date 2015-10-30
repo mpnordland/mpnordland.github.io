@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Password Generator</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+
+        <link rel="stylesheet" href="css/normalize.min.css">
+        <link rel="stylesheet" href="css/main.css">
+
+        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+        <h1>Secure Password Generator</h1>
+        <div class="center">
+            <h2 data-bind="text: words"></h2>
+            <label for="passLength">Words in password (at least 1 and at most 2000):</label>
+            <input type="numeric" data-bind="value: passLength"/>
+            <br>
+            <button data-bind="click: getRandomNumbers">Make New Password!</button>
+            <br>
+            <a href="#" data-bind="click: showExpl">How does this work?</a> | Made by Micah Nordland: <a href="http://rehack.me">rehack.me</a>
+            <div id="expl" style="display:none;">
+                <p>
+                    This uses numbers from <a href="random.org">random.org</a>
+                    to generate passwords using the <a href="http://world.std.com/~reinhold/diceware.html">diceware</a> method. 
+                </p>
+                <p>
+                    The original diceware method used a set of dice and a long list of 
+                    short, common words. This still uses the list of words, but instead
+                    of dice it uses random numbers from random.org and looks them up
+                    automatically for you. The lookup is done completely client side. 
+                    Obviously, the random numbers must be fetched from random.org. Thus
+                    the paranoid should still use dice. But for the rest of us, this 
+                    should be good.
+                </p>
+            </div>
+        </div>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
+        
+        <script src="js/CreateAPI.js" ></script>
+        <script src="js/RandomOrgAPI.js" ></script>
+        <script src="js/knockout-3.0.0.js">
+        <script src="js/knockout.validation.min.js"></script>
+        <script src="js/plugins.js"></script>
+        <script src="js/wordlist.js"></script>
+        <script src="js/main.js"></script>
+
+    </body>
+</html>

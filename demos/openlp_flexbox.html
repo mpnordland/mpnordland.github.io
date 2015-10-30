@@ -1,0 +1,386 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>OpenLP Display</title>
+<style>
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    overflow: hidden;
+    -webkit-user-select: none;
+}
+
+html, body {
+    height: 100%;
+}
+body {
+    background-color: #00ff00;
+}
+.size {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+}
+#black {
+    z-index: 8;
+    background-color: black;
+    display: none;
+}
+#bgimage {
+    z-index: 1;
+}
+#image {
+    z-index: 2;
+}
+
+#videobackboard {
+    z-index:3;
+    background-color: #000000;
+}
+#video {
+    background-color: #000000;
+    z-index:4;
+}
+
+#flash {
+    z-index:5;
+}
+
+#alert {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 10;
+    width: 100%;
+    vertical-align: bottom;
+    font-family: DejaVu Sans;
+    font-size: 40pt;
+    color: #ffffff;
+    background-color: #660000;
+    word-wrap: break-word;
+}
+
+#footer {
+    position: absolute;
+    z-index: 6;
+    left: 10px;
+    bottom: 0px;
+    width: 100%;
+    font-family: Nimbus Sans L;
+    font-size: 12pt;
+    color: #FFFFFF;
+    background: #ff00ff;
+    text-align: left;
+    white-space: nowrap;
+
+}
+/* lyric css */
+
+.lyricstable {
+    z-index: 5;
+    background: #0000ff;
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: -10%;
+}
+.lyricscell {
+    background: #ff0000;
+    margin: 0 10px;
+    padding: 5px;
+    min-width: 20%;
+    min-height: 20%;
+    max-width:80%;
+    max-height:80%;
+}
+.lyricsmain {
+     -webkit-text-stroke: 0.125em #000000; -webkit-text-fill-color: #FFFFFF;  text-shadow: #000000 5px 5px;
+}
+
+sup {
+    font-size: 0.6em;
+    vertical-align: top;
+    position: relative;
+    top: -0.3em;
+}
+</style>
+<script>
+    var timer = null;
+    var transition = false;
+
+    function show_video(state, path, volume, loop, variable_value){
+        // Sometimes  video.currentTime stops slightly short of video.duration and video.ended is intermittent!
+
+        var video = document.getElementById('video');
+        if(volume != null){
+            video.volume = volume;
+        }
+        switch(state){
+            case 'load':
+                video.src = 'file:///' + path;
+                if(loop == true) {
+                    video.loop = true;
+                }
+                video.load();
+                break;
+            case 'play':
+                video.play();
+                break;
+            case 'pause':
+                video.pause();
+                break;
+            case 'stop':
+                show_video('pause');
+                video.currentTime = 0;
+                break;
+            case 'close':
+                show_video('stop');
+                video.src = '';
+                break;
+            case 'length':
+                return video.duration;
+            case 'current_time':
+                return video.currentTime;
+            case 'seek':
+                video.currentTime = variable_value;
+                break;
+            case 'isEnded':
+                return video.ended;
+            case 'setVisible':
+                video.style.visibility = variable_value;
+                break;
+            case 'setBackBoard':
+                var back = document.getElementById('videobackboard');
+                back.style.visibility = variable_value;
+                break;
+       }
+    }
+
+    function getFlashMovieObject(movieName)
+    {
+        if (window.document[movieName]){
+            return window.document[movieName];
+        }
+        if (document.embeds && document.embeds[movieName]){
+            return document.embeds[movieName];
+        }
+    }
+
+    function show_flash(state, path, volume, variable_value){
+        var text = document.getElementById('flash');
+        var flashMovie = getFlashMovieObject("OpenLPFlashMovie");
+        var src = "src = 'file:///" + path + "'";
+        var view_parm = " wmode='opaque'" + " width='100%%'" + " height='100%%'";
+        var swf_parm = " name='OpenLPFlashMovie'" + " autostart='true' loop='false' play='true'" +
+            " hidden='false' swliveconnect='true' allowscriptaccess='always'" + " volume='" + volume + "'";
+
+        switch(state){
+            case 'load':
+                text.innerHTML = "<embed " + src + view_parm + swf_parm + "/>";
+                flashMovie = getFlashMovieObject("OpenLPFlashMovie");
+                flashMovie.Play();
+                break;
+            case 'play':
+                flashMovie.Play();
+                break;
+            case 'pause':
+                flashMovie.StopPlay();
+                break;
+            case 'stop':
+                flashMovie.StopPlay();
+                tempHtml = text.innerHTML;
+                text.innerHTML = '';
+                text.innerHTML = tempHtml;
+                break;
+            case 'close':
+                flashMovie.StopPlay();
+                text.innerHTML = '';
+                break;
+            case 'length':
+                return flashMovie.TotalFrames();
+            case 'current_time':
+                return flashMovie.CurrentFrame();
+            case 'seek':
+//                flashMovie.GotoFrame(variable_value);
+                break;
+            case 'isEnded':
+                //TODO check flash end
+                return false;
+            case 'setVisible':
+                text.style.visibility = variable_value;
+                break;
+        }
+    }
+
+    function show_alert(alerttext, position){
+        var text = document.getElementById('alert');
+        text.innerHTML = alerttext;
+        if(alerttext == '') {
+            text.style.visibility = 'hidden';
+            return 0;
+        }
+        if(position == ''){
+            position = getComputedStyle(text, '').verticalAlign;
+        }
+        switch(position)
+        {
+            case 'top':
+                text.style.top = '0px';
+                break;
+            case 'middle':
+                text.style.top = ((window.innerHeight - text.clientHeight) / 2)
+                    + 'px';
+                break;
+            case 'bottom':
+                text.style.top = (window.innerHeight - text.clientHeight)
+                    + 'px';
+                break;
+        }
+        text.style.visibility = 'visible';
+        return text.clientHeight;
+    }
+
+    function update_css(align, font, size, color, bgcolor){
+        var text = document.getElementById('alert');
+        text.style.fontSize = size + "pt";
+        text.style.fontFamily = font;
+        text.style.color = color;
+        text.style.backgroundColor = bgcolor;
+        switch(align)
+        {
+            case 'top':
+                text.style.top = '0px';
+                break;
+            case 'middle':
+                text.style.top = ((window.innerHeight - text.clientHeight) / 2)
+                    + 'px';
+                break;
+            case 'bottom':
+                text.style.top = (window.innerHeight - text.clientHeight)
+                    + 'px';
+                break;
+        }
+    }
+
+
+    function show_image(src){
+        var img = document.getElementById('image');
+        img.src = src;
+        if(src == '')
+            img.style.display = 'none';
+        else
+            img.style.display = 'block';
+    }
+
+    function show_blank(state){
+        var black = 'none';
+        var lyrics = '';
+        switch(state){
+            case 'theme':
+                lyrics = 'hidden';
+                break;
+            case 'black':
+                black = 'block';
+                break;
+            case 'desktop':
+                break;
+        }
+        document.getElementById('black').style.display = black;
+        document.getElementById('lyricsmain').style.visibility = lyrics;
+        document.getElementById('image').style.visibility = lyrics;
+        document.getElementById('footer').style.visibility = lyrics;
+    }
+
+    function show_footer(footertext){
+        document.getElementById('footer').innerHTML = footertext;
+    }
+
+    function show_text(new_text){
+        var match = /-webkit-text-fill-color:[^;"]+/gi;
+        if(timer != null)
+            clearTimeout(timer);
+        /*
+        QtWebkit bug with outlines and justify causing outline alignment
+        problems. (Bug 859950) Surround each word with a <span> to workaround,
+        but only in this scenario.
+        */
+        var txt = document.getElementById('lyricsmain');
+        if(window.getComputedStyle(txt).textAlign == 'justify'){
+            if(window.getComputedStyle(txt).webkitTextStrokeWidth != '0px'){
+                new_text = new_text.replace(/(\s|&nbsp;)+(?![^<]*>)/g,
+                    function(match) {
+                        return '</span>' + match + '<span>';
+                    });
+                new_text = '<span>' + new_text + '</span>';
+            }
+        }
+        text_fade('lyricsmain', new_text);
+    }
+
+    function text_fade(id, new_text){
+        /*
+        Show the text.
+        */
+        var text = document.getElementById(id);
+        if(text == null) return;
+        if(!transition){
+            text.innerHTML = new_text;
+            return;
+        }
+        // Fade text out. 0.1 to minimize the time "nothing" is shown on the screen.
+        text.style.opacity = '0.1';
+        // Fade new text in after the old text has finished fading out.
+        timer = window.setTimeout(function(){_show_text(text, new_text)}, 400);
+    }
+
+    function _show_text(text, new_text) {
+        /*
+        Helper function to show the new_text delayed.
+        */
+        text.innerHTML = new_text;
+        text.style.opacity = '1';
+        // Wait until the text is completely visible. We want to save the timer id, to be able to call
+        // clearTimeout(timer) when the text has changed before finishing fading.
+        timer = window.setTimeout(function(){timer = null;}, 400);
+    }
+
+    function show_text_completed(){
+        return (timer == null);
+    }
+</script>
+</head>
+    <body>
+        <img id="bgimage" class="size" style="display:none;" />
+        <img id="image" class="size" style="display:none;" />
+
+        <div id="videobackboard" class="size" style="visibility:hidden"></div>
+        <video id="video" class="size" style="visibility:hidden" autobuffer preload></video>
+
+        <div id="flash" class="size" style="visibility:hidden"></div>
+
+            <div id="alert" style="visibility:hidden"></div>
+
+        <div class="lyricstable"><div id="lyricsmain" style="opacity:1" class="lyricscell lyricsmain">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur. Donec ut libero sed arcu vehicula ultricies a non tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut gravida lorem. Ut turpis felis, pulvinar a semper sed, adipiscing id dolor. Pellentesque auctor nisi id magna consequat sagittis. Curabitur dapibus enim sit amet elit pharetra tincidunt feugiat nisl imperdiet. Ut convallis libero in urna ultrices accumsan. Donec sed odio eros. Donec viverra mi quis quam pulvinar at malesuada arcu rhoncus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In rutrum accumsan ultricies. Mauris vitae nisi at sem facilisis semper ac in est.
+            
+            
+            Vivamus fermentum semper porta. Nunc diam velit, adipiscing ut tristique vitae, sagittis vel odio. Maecenas convallis ullamcorper ultricies. Curabitur ornare, ligula semper consectetur sagittis, nisi diam iaculis velit, id fringilla sem nunc vel mi. Nam dictum, odio nec pretium volutpat, arcu ante placerat erat, non tristique elit urna et turpis. Quisque mi metus, ornare sit amet fermentum et, tincidunt et orci. Fusce eget orci a orci congue vestibulum. Ut dolor diam, elementum et vestibulum eu, porttitor vel elit. Curabitur venenatis pulvinar tellus gravida ornare. Sed et erat faucibus nunc euismod ultricies ut id justo. Nullam cursus suscipit nisi, et ultrices justo sodales nec. Fusce venenatis facilisis lectus ac semper. Aliquam at massa ipsum. Quisque bibendum purus convallis nulla ultrices ultricies. Nullam aliquam, mi eu aliquam tincidunt, purus velit laoreet tortor, viverra pretium nisi quam vitae mi. Fusce vel volutpat elit. Nam sagittis nisi dui.
+            
+            
+            Suspendisse lectus leo, consectetur in tempor sit amet, placerat quis neque. Etiam luctus porttitor lorem, sed suscipit est rutrum non. Curabitur lobortis nisl a enim congue semper. Aenean commodo ultrices imperdiet. Vestibulum ut justo vel sapien venenatis tincidunt. Phasellus eget dolor sit amet ipsum dapibus condimentum vitae quis lectus. Aliquam ut massa in turpis dapibus convallis. Praesent elit lacus, vestibulum at malesuada et, ornare et est. Ut augue nunc, sodales ut euismod non, adipiscing vitae orci. Mauris ut placerat justo. Mauris in ultricies enim. Quisque nec est eleifend nulla ultrices egestas quis ut quam. Donec sollicitudin lectus a mauris pulvinar id aliquam urna cursus. Cras quis ligula sem, vel elementum mi. Phasellus non ullamcorper urna.
+            
+            
+            Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. In euismod ultrices facilisis. Vestibulum porta sapien adipiscing augue congue id pretium lectus molestie. Proin quis dictum nisl. Morbi id quam sapien, sed vestibulum sem. Duis elementum rutrum mauris sed convallis. Proin vestibulum magna mi. Aenean tristique hendrerit magna, ac facilisis nulla hendrerit ut. Sed non tortor sodales quam auctor elementum. Donec hendrerit nunc eget elit pharetra pulvinar. Suspendisse id tempus tortor. Aenean luctus, elit commodo laoreet commodo, justo nisi consequat massa, sed vulputate quam urna quis eros. Donec vel.  
+        </div></div>
+        <div id="footer" class="footer">Hello Footer</div>
+        <div id="black" class="size"></div>
+    </body>
+</html>
