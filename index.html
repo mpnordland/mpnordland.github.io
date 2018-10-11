@@ -1,117 +1,308 @@
+<html>
+
 <head>
-	<meta charset="utf-8">
-	<title>rehack.me</title>
-	<style>
-
-        *, *:before, *:after {
-          box-sizing: border-box;
-        }
-        body {
-          font-family: 'Open Sans', 'sans-serif';
-          background-color: #fff;
-          color: #111;
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Micah Nordland</title>
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400" rel="stylesheet">
+    <style type="text/css">
+        html, body {
+            margin: 0;
+            font-family: 'Josefin Sans', sans-serif;
+            overflow-x: hidden;
         }
 
-        h1, p {
-          margin: 0 0 1em 0;
+        .container {
+            display: flex;
+            flex-direction: row;
+            height: 100%;
+            transform: translateX(0);
+            transition: transform 0.3s;
+        }
+
+        .page {
+            flex-shrink: 0;
+            width: 100vw;
+            color: white;
+            overflow-y: auto;
+        }
+
+        .home {
+            background-color: #bf6b00;
+        }
+
+
+        .portfolio {
+            background-color: #400029;
         }
 
         .wrapper {
-          max-width: 940px;
-          margin: 0;
-          display: grid;
-          grid-gap: 10px;
+            padding: 110px 10px 0px 10px;
+            display: flex;
+            flex-direction: column;
         }
 
-        @media screen and (min-width: 500px) {
-
-          /* no grid support? */
-          .sidebar {
-            float: left;
-            width: 19.1489%;
-          }
-
-          .content {
-            float: right;
-            width: 79.7872%;
-          }
-
-          .wrapper {
-            margin: 0 auto;
-            grid-template-columns: 1fr 3fr;
-          }
-          .header, .footer {
-            grid-column: 1 / -1;
-            /* needed for the floated layout */
-            clear: both;
-          }
-          .wrapper > * {
-            padding: 20px;
-          }
-
+        #controls {
+            position: fixed;
+            z-index: 1;
+            width: 100%;
+            display: flex;
+            padding: 15px 20px 0px 20px;
+            animation: color-change-home 0.4s alternate 1;
+            background-color: rgba(191, 107, 0, 0.8);
+            transition: background-color 0s;
+            transition-delay: 0.39s;
+            font-weight: 300;
+            line-height: 40px;
         }
 
-        .wrapper > * {
-          border-radius: 5px;
-          font-size: 150%;
-          /* needed for the floated layout*/
-          margin-bottom: 10px;
+        #controls label {
+            color: white;
+            font-size: 22px;
+            padding: 0px 2px;
         }
 
-        /* We need to set the widths used on floated items back to auto, and remove the bottom margin as when we have grid we have gaps. */
-        @supports (display: grid) {
-          .wrapper > * {
-            width: auto;
+        #controls h1 {
+            font-weight: 300;
+            display: inline-block;
             margin: 0;
-          }
+            margin-left: 10px;
+            padding-top: 2px;
+            color: white;
+            font-size: 22px;
         }
-        h1 {
-          font-family: 'Source Sans Pro', sans-serif;
-          font-weight: 200;
+
+        #homeButton {
+            margin-left: auto;
+            margin-right: 20px;
         }
-        #profile-image{
-            max-width: 100%;
+
+        #portfolioButton {
+            margin-right: 40px;
+        }
+
+        #switch {
+            display: none;
+        }
+
+        #switch:not(:checked)~#controls #homeButton {
+            border-bottom: 2px solid white;
+            pointer-events: none;
+        }
+
+
+        #switch:checked~#controls {
+            animation: color-change-portfolio 0.5s linear alternate 1;
+            background-color: rgba(64, 0, 41, 0.8);
+        }
+
+
+        #switch:checked~#controls #portfolioButton {
+            border-bottom: 2px solid white;
+            pointer-events: none;
+        }
+
+        #switch:checked~.container {
+            transform: translateX(-100vw);
+        }
+
+        @keyframes color-change-portfolio {
+            0% {
+                background-color: rgba(191, 107, 0, 0.8);
+            }
+
+            20% {
+                background-color: rgba(191, 107, 0, 0.1);
+            }
+
+            60% {
+                background-color: rgba(64, 0, 41, 0.1);
+            }
+
+            100% {
+                background-color: rgba(64, 0, 41, 0.8);
+            }
+        }
+
+        @keyframes color-change-home {
+            0% {
+                background-color: rgba(64, 0, 41, 0.8);
+            }
+
+            20% {
+                background-color: rgba(64, 0, 41, 0.1);
+            }
+
+            60% {
+                background-color: rgba(191, 107, 0, 0.5);
+            }
+
+            100% {
+                background-color: rgba(191, 107, 0, 0.8);
+            }
+        }
+
+        .photo {
+            width: 100%;
+            display: block;
             height: auto;
         }
-        a {
-            color: #324599;
-        }
-	</style>
 
-</head>
-<body>
-    <div class="wrapper">
-      <header class="header">
-          <h1> It's not what you hack<br>It's what you keep on hacking</h1>
-      </header>
-      <aside class="sidebar">
-            <img id="profile-image" src="webpic.jpg" title="A photo of Micah Nordland" alt="A photo of Micah Nordland">
-      </aside>
-      <article class="content">
-                <p id="bio">
-                Micah Nordland is a full stack web developer and photographer. He enjoys works of literature and art that inspire a sense of
-                wonder and provide facinating worlds to explore. Some of his hobbies include cycling, pen and paper RPGs and video games.
-                Silliness is good, and so are dragons.
-                </p>
-                <ul id="links">
-                    <li>
-                        Blog: <a href="http://thoughtfuldragon.com/">thoughtfuldragon.com</a>
-                    </li>
-                    <li>
-                        Github: <a href="https://github.com/mpnordland/">mpnordland</a>
-                    </li>
-                    <li>
-                        Twitter: <a href="https://twitter.com/mpnordland">@mpnordland</a>
-                    </li>
-                </ul>
-      </article>
-      <footer class="footer">
-          <a href="/demos">Demos</a>
-          <a href="/passwords">Password Generator</a>
-          <a href="/randomface">Random Face Generator</a>
-      </footer>
-    </div>
-    <style>
-        @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:200');
+        @media screen and (min-width: 1279px){
+            .wrapper {
+                padding: 40px 100px;
+                flex-direction: row;
+                align-items: flex-start;
+            }
+            .portfolio .wrapper {
+                flex-wrap: wrap;
+            }
+            .photo {
+                margin-top: 5%;
+                width: 650px;
+            }
+
+            .description {
+                margin: 12% 0 0 6vw;
+                width: 28vw;
+                flex-shrink: 0;
+            }
+
+            .description p {
+                margin-bottom: 50px;
+                font-size: 22px;
+                line-height: 1.25em;
+            }
+
+        }
+        @media screen and (min-width: 1399px){
+            .description {
+                margin: 12% 0 0 12vw;
+            }
+        }
+
     </style>
+
+<body>
+    <input type="checkbox" id="switch">
+    <div id="controls">
+        <h1>
+            Micah Nordland
+        </h1>
+        <label for="switch" id="homeButton">Home</label>
+        <label for="switch" id="portfolioButton">Portfolio</label>
+    </div>
+
+    <div class="container">
+
+        <div class="page home">
+            <div class="wrapper">
+                <img class="photo" src="img/micah.png" />
+                <div class="description">
+                    <p>
+                        Programmer. Photographer. Artist.
+                    </p>
+                    <p>
+                        Micah Nordland is a full stack web developer
+                        and photographer. He enjoys works of literature
+                        and art that inspire a sense of wonder and
+                        provide facinating worlds to explore. Some of
+                        his hobbies include cycling, pen and paper RPGs
+                        and video games.
+                    </p>
+                    <p>
+                        Silliness is good, and so are dragons.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="page portfolio">
+            <div class="wrapper">
+
+            <img class="photo" src="img/0002.jpg" />
+            <div class="description">
+                <p>
+                    Grandfather and Grandson
+                </p>
+                <p>
+                    Sometimes a glance can say it all.
+                </p>
+            </div>
+            <img class="photo" src="img/0004.jpg" />
+            <div class="description">
+                <p>
+                    Wind Turbine
+                </p>
+                <p>
+                    Steady solitude in shifting circumstances
+                </p>
+            </div>
+            <img class="photo" src="img/0003.jpg" />
+            <div class="description">
+                <p>
+                    Moth
+                </p>
+                <p>
+                    Beauty in unexpected times and places.
+            </div>
+            <img class="photo" src="img/0005.jpg" />
+            <div class="description">
+                <p>
+                    Cloud
+                </p>
+                <p>
+                    Whither it goes, no one knows.
+                </p>
+            </div>
+            <img class="photo" src="img/0001.jpg" />
+            <div class="description">
+                <p>
+                    Rooster and Hen
+                </p>
+                <p>
+                    Not at all like people.
+                </p>
+            </div>
+            <img class="photo" src="img/0006.jpg" />
+            <div class="description">
+                <p>
+                    The World Below
+                </p>
+                <p>
+                    Pass unseen and unseeing.
+                </p>
+            </div>
+            <img class="photo" src="img/0007.jpg" />
+            <div class="description">
+                <p>
+                    Portal
+                </p>
+                <p>
+                    Destination unknown.
+                </p>
+            </div>
+            <img class="photo" src="img/0010.jpg" />
+            <div class="description">
+                <p>
+                    Spiral Tree
+                </p>
+                <p>
+                    Life has its twists and turns.
+                </p>
+            </div>
+            <img class="photo" src="img/0009.jpg" />
+            <div class="description">
+                <p>
+                    Ferris Wheel
+                </p>
+                <p>
+                    Worldly amusements pale to the divine.
+                </p>
+            </div>
+            </div>
+        </div>
+    </div>
+
 </body>
+
+</html>
