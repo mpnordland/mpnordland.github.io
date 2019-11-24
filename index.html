@@ -6,7 +6,8 @@
     <title>Micah Nordland</title>
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400" rel="stylesheet">
     <style type="text/css">
-        html, body {
+        html,
+        body {
             margin: 0;
             font-family: 'Josefin Sans', sans-serif;
             overflow-x: hidden;
@@ -33,13 +34,14 @@
 
 
         .portfolio {
-            background-color: #400029;
+            background-color: #05000d;
         }
 
         .wrapper {
             padding: 110px 10px 0px 10px;
             display: flex;
             flex-direction: column;
+            overflow-y: hidden;
         }
 
         #controls {
@@ -48,7 +50,6 @@
             width: 100%;
             display: flex;
             padding: 15px 20px 0px 20px;
-            animation: color-change-home 0.4s alternate 1;
             background-color: rgba(0, 0, 0, 0.8);
             transition: background-color 0s;
             transition-delay: 0.39s;
@@ -90,13 +91,6 @@
             pointer-events: none;
         }
 
-
-        #switch:checked~#controls {
-            animation: color-change-portfolio 0.5s linear alternate 1;
-            background-color: rgba(64, 0, 41, 0.8);
-        }
-
-
         #switch:checked~#controls #portfolioButton {
             border-bottom: 2px solid white;
             pointer-events: none;
@@ -106,60 +100,37 @@
             transform: translateX(-100vw);
         }
 
-        @keyframes color-change-portfolio {
-            0% {
-                background-color: rgba(0, 0, 0, 0.8);
-            }
-
-            20% {
-                background-color: rgba(0, 0, 0, 0.1);
-            }
-
-            60% {
-                background-color: rgba(64, 0, 41, 0.1);
-            }
-
-            100% {
-                background-color: rgba(64, 0, 41, 0.8);
-            }
-        }
-
-        @keyframes color-change-home {
-            0% {
-                background-color: rgba(64, 0, 41, 0.8);
-            }
-
-            20% {
-                background-color: rgba(64, 0, 41, 0.1);
-            }
-
-            60% {
-                background-color: rgba(0, 0, 0, 0.5);
-            }
-
-            100% {
-                background-color: rgba(0, 0, 0, 0.8);
-            }
+        .description {
+            font-size: 22px;
+            padding: 1rem;
         }
 
         .photo {
-            width: 100%;
             display: block;
             height: auto;
+            width: 100%;
+            margin: 1rem 0;
         }
 
-        @media screen and (min-width: 1279px){
+        @media screen and (min-width: 1279px) {
             .wrapper {
                 padding: 40px 100px;
                 flex-direction: row;
-                align-items: flex-start;
+                align-items: center;
             }
+
             .portfolio .wrapper {
-                flex-wrap: wrap;
+                flex-direction: column;
             }
+
             .photo {
                 margin-top: 5%;
-                width: 650px;
+                height: 80vh;
+                width: auto;
+            }
+
+            .controls {
+                font-size: 1em;
             }
 
             .description {
@@ -173,17 +144,14 @@
                 font-size: 22px;
                 line-height: 1.25em;
             }
-            .controls {
-                font-size: 1em;
-            }
 
         }
-        @media screen and (min-width: 1399px){
+
+        @media screen and (min-width: 1399px) {
             .description {
                 margin: 12% 0 0 12vw;
             }
         }
-
     </style>
 
 <body>
@@ -222,105 +190,17 @@
 
         <div class="page portfolio">
             <div class="wrapper">
-
-            <img class="photo" src="img/0002.jpg" />
-            <div class="description">
-                <p>
-                    Grandfather and Grandson
-                </p>
-                <p>
-                    Sometimes a glance can say it all.
-                </p>
-            </div>
-            <img class="photo" src="img/0004.jpg" />
-            <div class="description">
-                <p>
-                    Wind Turbine
-                </p>
-                <p>
-                    Steady solitude in shifting circumstances
-                </p>
-            </div>
-            <img class="photo" src="img/0003.jpg" />
-            <div class="description">
-                <p>
-                    Moth
-                </p>
-                <p>
-                    Beauty in unexpected times and places.
-            </div>
-            <img class="photo" src="img/0005.jpg" />
-            <div class="description">
-                <p>
-                    Cloud
-                </p>
-                <p>
-                    Whither it goes, no one knows.
-                </p>
-            </div>
-            <img class="photo" src="img/0011.jpg" />
-            <div class="description">
-                <p>
-                    Firework
-                </p>
-                <p>
-                    A celebration of sparks
-                </p>
-            </div>
-            <img class="photo" src="img/0001.jpg" />
-            <div class="description">
-                <p>
-                    Rooster and Hen
-                </p>
-                <p>
-                    Not at all like people.
-                </p>
-            </div>
-            <img class="photo" src="img/0006.jpg" />
-            <div class="description">
-                <p>
-                    The World Below
-                </p>
-                <p>
-                    Pass unseen and unseeing.
-                </p>
-            </div>
-            <img class="photo" src="img/0007.jpg" />
-            <div class="description">
-                <p>
-                    Portal
-                </p>
-                <p>
-                    Destination unknown.
-                </p>
-            </div>
-            <img class="photo" src="img/0012.jpg" />
-            <div class="description">
-                <p>
-                    Spider's Ballroom
-                </p>
-                <p>
-                    Full of cold glitter.
-                </p>
-            </div>
-            <img class="photo" src="img/0010.jpg" />
-            <div class="description">
-                <p>
-                    Spiral Tree
-                </p>
-                <p>
-                    Life has its twists and turns.
-                </p>
-            </div>
-            <img class="photo" src="img/0009.jpg" />
-            <div class="description">
-                <p>
-                    Ferris Wheel
-                </p>
-                <p>
-                    Worldly amusements pale to the divine.
-                </p>
-            </div>
+                <img class="photo" src="img/0002.jpg" />
+                <img class="photo" src="img/0004.jpg" />
+                <img class="photo" src="img/0003.jpg" />
+                <img class="photo" src="img/0005.jpg" />
+                <img class="photo" src="img/0011.jpg" />
+                <img class="photo" src="img/0001.jpg" />
+                <img class="photo" src="img/0006.jpg" />
+                <img class="photo" src="img/0007.jpg" />
+                <img class="photo" src="img/0012.jpg" />
+                <img class="photo" src="img/0010.jpg" />
+                <img class="photo" src="img/0009.jpg" />
             </div>
         </div>
     </div>
