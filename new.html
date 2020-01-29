@@ -1,0 +1,204 @@
+<html>
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Micah Nordland</title>
+	<link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400" rel="stylesheet">
+	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	<style>
+		* {
+			box-sizing: border-box;
+			padding: 0;
+			margin: 0;
+		}
+
+		body {
+			margin: 0;
+			background: #111;
+			color: #fff;
+			font-family: 'Josefin Sans', sans-serif;
+			font-size: calc(1em + 0.333vw);
+		}
+
+		p,
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6,
+		li,
+		figcaption {
+			max-width: 60ch;
+		}
+
+		h1 {
+			font-size: 2.5rem;
+		}
+
+		nav {
+			padding: 1vh;
+			display: flex;
+			justify-content: space-between;
+			flex-wrap: wrap;
+		}
+
+		nav>* {
+			margin: calc(1rem / 1.5);
+		}
+
+
+		nav>p {
+			font-size: 1.75rem;
+			margin: 1rem;
+		}
+
+		nav>ul {
+			display: flex;
+			justify-content: flex-start;
+			list-style: none;
+			flex-wrap: wrap;
+		}
+
+		nav>ul li {
+			margin: calc(1rem / 1.5)
+		}
+
+		a {
+			color: #0088cc;
+		}
+
+		a:visited {
+			color: #ff8e2c;
+		}
+
+		img {
+			width: 100%;
+		}
+
+		.cover {
+			display: flex;
+			flex-direction: column;
+			padding: 1rem;
+			min-height: 100vh;
+		}
+
+
+
+		.cover>.profile {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			margin-top: auto;
+			margin-bottom: auto;
+		}
+
+		.cover> :first-child:not(.profile) {
+			margin-top: 0;
+		}
+
+		.cover> :last-child:not(.profile) {
+			margin-bottom: 0;
+		}
+
+		.profile {
+			padding: 2vw;
+		}
+
+		.stack>*+* {
+			margin-top: 1.5rem;
+		}
+
+		.photo {
+			display: block;
+		}
+
+		.profile .photo {
+			border-radius: 5%;
+			max-width: 20rem;
+		}
+
+		#portfolio {
+			margin: calc(1rem / 1.5);
+		}
+		#portfolio .photo {
+			min-height: 100vh;
+			width: auto;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		button {
+			background: rgb(10, 175, 255);
+			background: linear-gradient(167deg, rgba(10,175,255,1) 0%, rgba(15,103,226,1) 35%, rgba(113,95,230,1) 51%, rgba(255,142,44,1) 93%);
+			color: white;
+			font-size: 1.5rem;
+			padding: 0.75rem 3.75rem;
+			border-radius: 5rem;
+			border: none;
+			font-weight: bold;
+		}
+	</style>
+</head>
+
+<body>
+	<main>
+		<section class="cover">
+			<nav>
+				<p>Micah Nordland</p>
+				<ul>
+					<li><a href="https://github.com/mpnordland">Github</a></li>
+					<li><a href="https://thoughtfuldragon.com">Blog</a></li>
+					<li><a href="https://glitch.com/@mpnordland">Glitch</a></li>
+					<li><a href="https://twitter.com/mpnordland">Twitter</a></li>
+					<li><a href="https://tilde.club/~mpnordland">Tilde.club</a></li>
+				</ul>
+			</nav>
+			<div class="profile stack">
+                <img class="photo" src="img/micah.jpg" />
+				<h1>Programmer. Photographer. Artist.</h1>
+				<div class="stack">
+					<p>
+						Micah Nordland is a full stack web developer
+						and photographer. He enjoys works of literature
+						and art that inspire a sense of wonder and
+						provide facinating worlds to explore. Some of
+						his hobbies include cycling, pen and paper RPGs
+						and video games.
+					</p>
+					<p>
+						Silliness is good, and so are dragons.
+					</p>
+					<!-- <p>
+						While you're here, why not <a href="/resume.pdf">offer me a job?</a>
+					</p> -->
+				</div>
+
+				<button id="portfolioButton">Portfolio <i class="fa fa-arrow-down"></i></button>
+			</div>
+		</section>
+
+		<section id="portfolio" class="cover">
+
+			<div class="stack">
+                <img class="photo" src="img/0002.jpg" />
+                <img class="photo" src="img/0004.jpg" />
+                <img class="photo" src="img/0003.jpg" />
+                <img class="photo" src="img/0005.jpg" />
+                <img class="photo" src="img/0001.jpg" />
+                <img class="photo" src="img/0006.jpg" />
+                <img class="photo" src="img/0007.jpg" />
+                <img class="photo" src="img/0011.jpg" />
+                <img class="photo" src="img/0009.jpg" />
+                <img class="photo" src="img/0010.jpg" />
+                <img class="photo" src="img/0012.jpg" />
+
+			</div>
+		</section>
+	</main>
+
+
+</body>
+
+</html>
