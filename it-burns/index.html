@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This site burns your eyes</title>
+    <style>
+        @font-face {
+            font-family: "Anxiety";
+            src: url("fonts/Anxiety.woff2") format("woff2"),
+                url("fonts/Anxiety.otf") format("otf");
+        }
+
+        @keyframes flicker {
+            0% {
+                background-color: white;
+                color: black;
+            }
+
+
+            85% {
+                background-color: white;
+                color: black;
+            }
+
+            86% {
+                background-color: black;
+                color: white;
+            }
+
+            88% {
+                background-color: white;
+                color: black;
+            }
+
+            89% {
+                background-color: black;
+                color: white;
+            }
+
+            90% {
+                background-color: white;
+                color: black;
+            }
+
+            99% {
+                background-color: white;
+                color: black;
+            }
+
+            100% {
+                background-color: black;
+                color: white;
+            }
+
+        }
+
+        html {
+            box-sizing: border-box;
+        }
+
+        *,
+        *:before,
+        *:after {
+            box-sizing: inherit;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+            animation-name: flicker;
+            animation-iteration-count: infinite;
+            animation-duration: 3s;
+            animation-direction: alternate;
+        }
+
+        body>* {
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        body> :first-child:not(h1) {
+            margin-top: 0;
+        }
+
+        body> :last-child:not(h1) {
+            margin-bottom: 0;
+        }
+
+        body>h1 {
+            margin-top: auto;
+            margin-bottom: auto;
+        }
+
+
+        h1 {
+            font-family: Anxiety;
+            text-align: center;
+            font-size: calc(100vw/12);
+        }
+
+        .warning {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100vw;
+            height: 100vh;
+            background-color: white;
+            color: black;
+            margin: 0;
+        }
+
+        .warning>* {
+            max-width: 40rem;
+            margin: 0 auto;
+        }
+
+        .warning .big {
+            font-family: Anxiety;
+            text-align: center;
+            font-size: calc(100vw/20);
+        }
+
+        #accept-warning:checked {
+            display: none;
+        }
+
+        #accept-warning:checked+.warning {
+            display: none;
+        }
+
+        label {
+            appearance: none;
+            background-color: black;
+            color: white;
+            padding: 1rem;
+            margin-top: 1rem;
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        @media (prefers-reduced-motion) {
+            body {
+                animation-name: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>This Site<br> Will Burn<br> Your Eyes<br> At Night</h1>
+    <input id="accept-warning" type="checkbox">
+    <div class="warning">
+        <div>
+            <p class="big">Flicker Warning</p>
+            <p>
+                This site has an effect which flickers and might trigger epilepsy or other conditions
+                You can disable it by following the instructions for your OS <a
+                    href="https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion#user_preferences">here</a>.
+            </p>
+            <label for="accept-warning">I understand about the flickering</label>
+        </div>
+    </div>
+</body>
+
+</html>
