@@ -3,8 +3,8 @@
 
 # TEAM
 
-    <name> -- <role> -- <twitter>
-    Micah Nordland creator @mpnordland
+    <name> -- <role>
+    Maya Nordland creator 
 
 # THANKS
 
